@@ -1,11 +1,11 @@
 var topics = ['reactions', 'entertainment', 'sports', 'stickers', 'artists']
 var giphy;
+var rating = "g"
 var queryURL;
-// var api ="wEeXZiLHseA1gEiE2GQ9gOMuf4xhvEy3";
 
 function getGifTopics() {
     giphy = $(this).attr("data-name");
-    queryURL = "https://api.giphy.com/v1/gifs/search?q=" + giphy + "&api_key=dc6zaTOxFJmzC&limit=10";
+    queryURL = "https://api.giphy.com/v1/gifs/search?q=" + giphy + "&api_key=dc6zaTOxFJmzC&limit=10&" + rating;
     console.log(queryURL);
     ajaxGifCall();
   };
@@ -18,9 +18,9 @@ function ajaxGifCall() {
       console.log(response);    
       var results = response.data;
       for (var i = 0; i < results.length; i++) {
-        var gifRow = $("<div class='col-md-3'>");
+        var gifRow = $("<div class='col-md-4'>");
         var gifDivs = $("<div class='card'>");
-        var gifImage = $("<img class='card-img-top img-fluid gif'>").attr("src", results[i].images.fixed_height_still.url);    
+        var gifImage = $("<img class='card-img-top gif'>").attr("src", results[i].images.fixed_height_still.url);    
         gifImage.attr("data-still", results[i].images.fixed_height_still.url);
         gifImage.attr("data-animate", results[i].images.fixed_height.url);
         gifImage.attr("data-state", "still");
