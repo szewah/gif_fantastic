@@ -18,6 +18,7 @@ function ajaxGifCall() {
       console.log(response);    
       var results = response.data;
       for (var i = 0; i < results.length; i++) {
+        var gifRow = $("<div class='col-md-3'>");
         var gifDivs = $("<div class='card'>");
         var gifImage = $("<img class='card-img-top img-fluid gif'>").attr("src", results[i].images.fixed_height_still.url);    
         gifImage.attr("data-still", results[i].images.fixed_height_still.url);
@@ -25,10 +26,11 @@ function ajaxGifCall() {
         gifImage.attr("data-state", "still");
         var gifCardBody = $("<div class='card-body'>")
         var gifRating = $("<h6>").text("Rating: " + results[i].rating);
-        var gifReference = $("<p>").text("This data is provided by the GIPHY API.");
+        var gifReference = $("<p class='rating'>").text("This data is provided by the GIPHY API.");
         gifCardBody.append(gifRating, gifReference);
         gifDivs.append(gifImage, gifCardBody);
-        $("#add-gifs-area").append(gifDivs);
+        gifRow.append(gifDivs);
+        $("#add-gifs-area").append(gifRow);
       }
     });
   };

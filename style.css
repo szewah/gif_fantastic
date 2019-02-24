@@ -2,8 +2,9 @@
     width: 20%;
 }
 
-#submit{
+#submit, #reset{
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .topics {
@@ -13,14 +14,17 @@
 }
 
 #add-gifs-area {
-    display: block;
+    display: flex;
 }
 
 .card-img-top {
-    width: 15rem;
+    height: 130px;
 }
 
 .card {
-    width: 250px;
-    margin: 5px;
+    margin: 10px;
+}
+
+.rating {
+    font-size: 10px;
 }
