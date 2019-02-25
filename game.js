@@ -5,7 +5,7 @@ var queryURL;
 
 function getGifTopics() {
     giphy = $(this).attr("data-name");
-    queryURL = "https://api.giphy.com/v1/gifs/search?q=" + giphy + "&api_key=dc6zaTOxFJmzC&limit=10&rating" + rating;
+    queryURL = "https://api.giphy.com/v1/gifs/search?q=" + giphy + "&api_key=dc6zaTOxFJmzC&limit=10&rating=" + rating;
     console.log(queryURL);
     ajaxGifCall();
   };
@@ -28,8 +28,10 @@ function ajaxGifCall() {
         var gifRating = $("<h6>").text("Rating: " + results[i].rating);
         var gifTitle = $("<p class='title'>").text(results[i].title);
         var gifReference = $("<p class='rating'>").text("This data is provided by the GIPHY API.");
-        // var gifDownload = $("<a class='download>").attr('src', results[i].images.)
-        gifCardBody.append(gifRating, gifTitle, gifReference);
+        var gifDownload = $("<a class='download'>").text("Download");
+        // gifDownload.attr("href", results[i].images.fixed_height.url);
+        gifDownload.attr("download", results[i].images.fixed_height.url);
+        gifCardBody.append(gifRating, gifTitle, gifReference, gifDownload);
         gifDivs.append(gifImage, gifCardBody);
         gifRow.append(gifDivs);
         $("#add-gifs-area").append(gifRow);
@@ -61,7 +63,7 @@ $(document).on("click", ".topics", getGifTopics);
 renderButtons(); 
 
 // solution thanks to https://github.com/britpicazo/giftastic/blob/master/assets/javascript/app.js
-
+//function that goes to the animated version of the gif once the still is clicked and vice versa
 function animate() {
     var state = $(this).attr("data-state");
     var animateImage = $(this).attr("data-animate");
