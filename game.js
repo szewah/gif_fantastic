@@ -5,7 +5,7 @@ var queryURL;
 
 function getGifTopics() {
     giphy = $(this).attr("data-name");
-    queryURL = "https://api.giphy.com/v1/gifs/search?q=" + giphy + "&api_key=dc6zaTOxFJmzC&limit=10&" + rating;
+    queryURL = "https://api.giphy.com/v1/gifs/search?q=" + giphy + "&api_key=dc6zaTOxFJmzC&limit=10&rating" + rating;
     console.log(queryURL);
     ajaxGifCall();
   };
@@ -26,8 +26,10 @@ function ajaxGifCall() {
         gifImage.attr("data-state", "still");
         var gifCardBody = $("<div class='card-body'>")
         var gifRating = $("<h6>").text("Rating: " + results[i].rating);
+        var gifTitle = $("<p class='title'>").text(results[i].title);
         var gifReference = $("<p class='rating'>").text("This data is provided by the GIPHY API.");
-        gifCardBody.append(gifRating, gifReference);
+        // var gifDownload = $("<a class='download>").attr('src', results[i].images.)
+        gifCardBody.append(gifRating, gifTitle, gifReference);
         gifDivs.append(gifImage, gifCardBody);
         gifRow.append(gifDivs);
         $("#add-gifs-area").append(gifRow);
