@@ -1,3 +1,16 @@
+#heading {
+    background-color: #607d8b; 
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Yesteryear', cursive;
+    text-align: center;
+    padding: 40px;
+    color: #ffc107;
+    font-size: 70px;
+}
+
 .form-control {
     width: 20%;
 }
@@ -11,18 +24,25 @@
     margin-top: 20px;
     margin-right: 10px;
     margin-bottom: 10px;
+    background-color: #ffc107;
 }
 
 #add-gifs-area {
     display: flex;
 }
 
-/* .card-img-top {
-    height: 130px;
-} */
-
 .card {
     margin: 10px;
+    border: 6px solid #ffc107;
+}
+
+.card-body {
+    background-color: #607d8b;
+    color: white;
+}
+
+a {
+  color: #ffc107;
 }
 
 .rating {

@@ -54,7 +54,7 @@ function renderGifs(response) {
 function renderButtons() {
     $("#buttons-view").empty();
     for (var i = 0; i < topics.length; i++) {
-      var gifBtn = $("<button class='btn btn-primary topics'>");
+      var gifBtn = $("<button class='btn topics'>");
       gifBtn.attr("data-name", topics[i]);
       gifBtn.text(topics[i]);
       $("#buttons-view").append(gifBtn);
