@@ -20,7 +20,7 @@ function ajaxGifCall() {
       for (var i = 0; i < results.length; i++) {
         var gifRow = $("<div class='col-md-4'>");
         var gifDivs = $("<div class='card'>");
-        var gifImage = $("<img class='card-img-top gif'>").attr("src", results[i].images.fixed_height_still.url);    
+        var gifImage = $("<img class='card-img-top gif' alt='gif'>").attr("src", results[i].images.fixed_height_still.url);    
         gifImage.attr("data-still", results[i].images.fixed_height_still.url);
         gifImage.attr("data-animate", results[i].images.fixed_height.url);
         gifImage.attr("data-state", "still");
@@ -29,8 +29,9 @@ function ajaxGifCall() {
         var gifTitle = $("<p class='title'>").text(results[i].title);
         var gifReference = $("<p class='rating'>").text("This data is provided by the GIPHY API.");
         var gifDownload = $("<a class='download'>").text("Download");
-        // gifDownload.attr("href", results[i].images.fixed_height.url);
-        gifDownload.attr("download", results[i].images.fixed_height.url);
+        gifDownload.attr("href", results[i].images.fixed_height.mp4);
+        gifDownload.attr("target", "_blank");
+        gifDownload.attr("download", "");
         gifCardBody.append(gifRating, gifTitle, gifReference, gifDownload);
         gifDivs.append(gifImage, gifCardBody);
         gifRow.append(gifDivs);
