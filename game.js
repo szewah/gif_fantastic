@@ -21,6 +21,7 @@ function ajaxGifCall() {
 };
 
 function renderGifs(response) {
+  $("#add-gifs-area").empty();
 //renders the gifs onto the page
   var results = response.data;
     for (var i = 0; i < results.length; i++) {
@@ -40,8 +41,9 @@ function renderGifs(response) {
 
       var gifDownload = $("<a class='download'>").text("Download");
       gifDownload.attr("href", results[i].images.fixed_height.mp4);
-      gifDownload.attr("target", "_blank");
-      gifDownload.attr("download", "");
+      gifDownload.attr("download", results[i].images.fixed_height.mp4);
+      // gifDownload.attr("target", "_blank");
+      // gifDownload.attr("download", "");
 
       gifCardBody.append(gifRating, gifTitle, gifReference, gifDownload);
       gifDivs.append(gifImage, gifCardBody);

@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 #heading {
     background-color: #607d8b; 
     width: 100%;
