@@ -75,6 +75,11 @@ $("#topic-form").on("submit", function(event) {
 $(document).on("click", ".topics", getGifTopics);
 renderButtons(); 
 
+$("#reset").on("click", function() {
+  event.preventDefault();
+  $("#add-gifs-area").empty();
+})
+
 // solution thanks to https://github.com/britpicazo/giftastic/blob/master/assets/javascript/app.js
 //function that goes to the animated version of the gif once the still is clicked and vice versa
 function animate() {
