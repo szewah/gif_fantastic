@@ -8,7 +8,7 @@ The user inputs a keyword which creates a button that they can then press to ret
 
 
 ## Built with
-HTML, CSS, Bootstrap, JQuery, GIPHY API
+HTML, CSS, Bootstrap, JQuery, GIPHY API.
 
 ## Acknowledgement
 Thanks to GIPHY for the use of its API and the instructors and teaching assistants at Columbia Univeristy Coding Bootcamp.
