@@ -1,4 +1,4 @@
-## Giffantastic
+## Giftastic
 The user inputs a keyword which creates a button that they can then press to return their gifs. On reloading, the page will clear the added buttons.
 
 - Github page: https://szewah.github.io/gif_fantastic/
