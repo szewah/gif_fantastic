@@ -4,7 +4,8 @@ The user inputs a keyword which creates a button that they can then press to ret
 - Github page: https://szewah.github.io/gif_fantastic/
 - Watch a video demonstration: https://vimeo.com/362689766
 
-![giftastic](https://user-images.githubusercontent.com/32065713/65732952-37f68900-e09a-11e9-9ad8-47bead7502d7.gif)
+<img width="1302" alt="Screen Shot 2019-09-27 at 10 31 45 AM" src="https://user-images.githubusercontent.com/32065713/65777423-07eacc80-e112-11e9-9371-b873bd702a42.png">
+
 
 
 ## Built with
