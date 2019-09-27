@@ -11,5 +11,8 @@ The user inputs a keyword which creates a button that they can then press to ret
 ## Built with
 HTML, CSS, Bootstrap, JQuery, GIPHY API.
 
+## Installation
+Download the file, open in VSC and run.
+
 ## Acknowledgement
 Thanks to GIPHY for the use of its API and the instructors and teaching assistants at Columbia Univeristy Coding Bootcamp.
